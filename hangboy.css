@@ -69,6 +69,7 @@ h3{
   width: 1.1em;
   display: inline-block;
   border: 2px solid rgba(7, 10, 66,.7);
+  box-shadow: 0 6px rgba(7, 10, 66,.3);
   background-color: rgba(255,255,255,.4);
   border-radius: 50%;
   font-weight:600;

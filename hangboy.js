@@ -6,6 +6,8 @@ let cities = [
   'berlin',
   'hamburg',
   'nantes',
+  'prague',
+  'beijing',
   'cairo',
   'rome',
   'sydney',

@@ -25,6 +25,7 @@ let cities = [
   'bristol'
 ];
 
+//GENERATING A NEW CITY
 let word = cities[Math.floor(Math.random()*cities.length)];
 let hiddenWord = [];
 for (i=0;i<word.length;i++){
@@ -39,7 +40,7 @@ let maskedWord = document.querySelector('.masked-word');
 maskedWord.textContent = hiddenWord.join('');
 console.log(word);
 
-// NOW WE ONLY START GUESSING LETTERS
+// HERE WE START GUESSING LETTERS
 var wrongGuesses = 0;
 var gallowsImg = document.querySelector('.gallows-image');
 var statusMsg = document.querySelector('.status');
@@ -61,7 +62,7 @@ function guessHandle(lttr){
     maskedWord.textContent = hiddenWord.join('');
     if (hiddenWord.join('') == word){
       statusMsg.style.display = 'block';
-      statusMsg.textContent = 'won';
+      statusMsg.textContent = 'you win';
 
       }
   }
@@ -72,7 +73,6 @@ function guessHandle(lttr){
       }
     else{
       gallowsImg.style.backgroundImage = 'url(images/7.png';
-      console.log('you loser');
       maskedWord.textContent = word;
       statusMsg.style.display = 'block';
       

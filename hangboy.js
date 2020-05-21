@@ -2,6 +2,16 @@ let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
 let cities = [
   'osaka',
+  'tokyo',
+  'berlin',
+  'hamburg',
+  'nantes',
+  'cairo',
+  'rome',
+  'sydney',
+  'warsaw',
+  'quebec',
+  'los angeles',
   'new mexico',
   'orlando',
   'detroit',

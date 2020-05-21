@@ -1,0 +1,100 @@
+body{
+  font-family: "Courier New", Courier, monospace;
+  font-size: 22px;
+  color:rgba(7, 10, 66,.7);
+  background-image: url('images/paper.jpg');
+  background-repeat:repeat-x;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+}
+
+main{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  padding: 10px;
+}
+h3{
+  margin-top: 5px;
+  margin-bottom: 3px;
+  text-transform: lowercase;
+}
+
+.img-container{
+  height:350px;
+  width:300px;
+  margin: 10px auto auto;
+}
+.gallows-image{
+  height:100%;
+  width:100%;
+  background-image: url('images/0.png');
+  background-size: cover;
+}
+
+.headline{
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px auto auto auto;
+}
+.status, .refresh{
+  border-radius: 5px;
+  box-shadow: 0 9px #999;
+  padding: 7px;
+  font-weight: 400;
+  background-color: rgb(255, 255, 153);
+  display: none;
+}
+.masked-word{
+  margin-top:10px;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+  font-size: 26px;
+  font-weight: 600;
+  color: rgb(7, 10, 66);
+}
+.alphabet{
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.guess-letter{
+  padding: 10px;
+  display: inline-block;
+  border: 2px solid rgb(255, 255, 153);
+  background-color: rgba(255,255,255,.4);
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+@media(max-width:800px){
+  body{
+    font-size: 19px;
+  }
+  main{
+    width: 90%;
+    height:90%;
+    margin: auto;
+  }
+
+  .headline{
+    width: 70%;
+    flex-direction: column;
+    margin: 0 auto auto;
+  }
+  .alphabet{
+    width: 92%;
+    margin-top: 10px;
+  }
+  .img-container{
+    margin: 0 auto auto;
+    height:190px;
+    width:125px;
+  }
+}

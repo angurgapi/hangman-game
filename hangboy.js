@@ -1,6 +1,8 @@
-let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+let game = true;
 
-let cities = [
+const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+const cities = [
   'osaka',
   'tokyo',
   'berlin',
@@ -27,6 +29,7 @@ let cities = [
   'bristol'
 ];
 
+
 //GENERATING A NEW CITY
 let word = cities[Math.floor(Math.random()*cities.length)];
 let hiddenWord = [];
@@ -40,7 +43,6 @@ for (i=0;i<word.length;i++){
 }
 let maskedWord = document.querySelector('.masked-word');
 maskedWord.textContent = hiddenWord.join('');
-console.log(word);
 
 // HERE WE START GUESSING LETTERS
 var wrongGuesses = 0;
@@ -65,6 +67,7 @@ function guessHandle(lttr){
     if (hiddenWord.join('') == word){
       statusMsg.style.display = 'block';
       statusMsg.textContent = 'you win';
+      game = false;
 
       }
   }
@@ -77,7 +80,8 @@ function guessHandle(lttr){
       gallowsImg.style.backgroundImage = 'url(images/7.png';
       maskedWord.textContent = word;
       statusMsg.style.display = 'block';
-      
+      game = false;
+
       }
     }
     guessList[alphabet.indexOf(lttr)].style.display = 'none';
@@ -87,9 +91,14 @@ function guessHandle(lttr){
 var guessList = document.querySelectorAll('.guess-letter');
 
 guessList.forEach(element => element.addEventListener('click', function(){
-  guessHandle(this.textContent)}
-));
+console.log(game);
+if (game==true){
+  guessHandle(this.textContent)
+}
+
+}));
 
 newGame.addEventListener('click',function(){
   location.reload();
+  game = true;
 })
